@@ -1,3 +1,7 @@
+" lazysearch.vim - Provides the option to search with timeout between keystrokes as well as by pressing Enter
+" Author:   <github.com/flkjh>
+" Version:  1.0
+
 if exists('loaded_lazy_search)')
     finish
 endif
