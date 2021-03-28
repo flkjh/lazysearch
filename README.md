@@ -12,8 +12,8 @@ If your're using a plugin manager, then add `'flkjh/lazysearch'` to the plugin r
 
 By default, no keys are mapped to lazy search. Open the `.vimrc` and add some key bindings that you prefer.
 
-    let g:lazysearch_backwards_key = "<space>h"
-    let g:lazysearch_forwards_key = "<space>l"
+    let g:lazysearch_backwards_key = "<space>k"
+    let g:lazysearch_forwards_key = "<space>j"
 
 If you want to change the timeout value, you can redefine the timeout value in your `.vimrc`. Default value is 550 (ms).
 
