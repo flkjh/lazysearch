@@ -20,14 +20,14 @@ fun s:MapForwards()
     if strlen(g:lazysearch_forwards_key) ==# 0
         return
     endif
-    exe "nn " . g:lazysearch_forwards_key .  " :call LazySearch()<cr> <bar> /"
-    exe "vn " . g:lazysearch_forwards_key .  " :call LazySearch()<cr> <bar> gv/"
+    exe "nn " . g:lazysearch_forwards_key .  " :<c-u>call LazySearch('/', 'n')<cr>"
+    exe "vn " . g:lazysearch_forwards_key .  " :<c-u>call LazySearch('/', 'v')<cr>"
 endfun
 
 fun s:MapBackwards()
     if strlen(g:lazysearch_backwards_key) ==# 0
         return
     endif
-    exe "nn " . g:lazysearch_backwards_key . " :call LazySearch()<cr> <bar> ?"
-    exe "vn " . g:lazysearch_backwards_key . " :call LazySearch()<cr> <bar> gv?"
+    exe "nn " . g:lazysearch_backwards_key . " :<c-u>call LazySearch('?', 'n')<cr>"
+    exe "vn " . g:lazysearch_backwards_key . " :<c-u>call LazySearch('?', 'v')<cr>"
 endfun

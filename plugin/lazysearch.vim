@@ -1,6 +1,6 @@
 " lazysearch.vim - Provides the option to search with timeout between keystrokes as well as by pressing Enter
 " Author:   <github.com/flkjh>
-" Version:  1.0
+" Version:  1.1
 
 if exists('loaded_lazy_search)')
     finish
@@ -60,9 +60,9 @@ fun s:LeaveCmdLine()
     if !s:MeetFastSearchCriteria()
         return
     endif
+    call s:StopTimer()
     let s:isSearching = 0
     let s:fastSearch = 0
-    call s:StopTimer()
 endfun
 
 fun! LazySearchTimerFun(timer)
@@ -71,8 +71,12 @@ fun! LazySearchTimerFun(timer)
     endif
 endfun
 
-fun! LazySearch() abort
+fun! LazySearch(searchCmd, mode) abort
     let s:fastSearch = 1
+    if a:mode ==# 'v'
+        normal gv
+    endif
+    call feedkeys(a:searchCmd)
 endfun
 
 fun s:StopTimer()
