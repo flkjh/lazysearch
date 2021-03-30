@@ -22,7 +22,7 @@ And `c/xxx` followed by pressing `Enter` will cut current char up to before the 
 
 And `y/xxx` followed by pressing `Enter` will yank current char up to before the match.
 
-These operations has to work with lazysearch, so we have  
+These operations has to work with lazysearch, so if we have  
 `let g:lazysearch_forwards_key = "["` in our `.vimrc` 
 then for example `d[xxx` should be equivalent to `d/xxx`, and if we are holding after typing `xxx` it should fire away the search after the set timeout value, which by default is 550 milliseconds.
 
