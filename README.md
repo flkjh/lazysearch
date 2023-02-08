@@ -41,8 +41,6 @@ The idea is to provide users the option to save keystrokes when searching.
 
 It is probably best suited for people that type fast and accurately, and especially for those who are aware of where matches occur during searching, since they can then just brefly hold for the completion of the search.
 
-I use the lazysearch a lot, but I guess that it is only suited for some vim users.
-
 ## Pitfalls
 
 If the user mistypes and the search executes, then of course a bad search is performed, and the user has to start all over, or at least bring back the last search somehow.
